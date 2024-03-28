@@ -1,0 +1,53 @@
+{
+  "RootLayout": {
+    "title": "শিরোনাম",
+    "description": "বর্ণনা NextJS."
+  },
+  "ModuleMenu": {
+    "dashboard": "ড্যাশবোর্ড",
+    "crm": {
+      "title": "Obchod",
+      "accounts": "হিসাব",
+      "opportunities": "সুযোগ",
+      "contacts": "পরিচিতি",
+      "leads": "Leads"
+    },
+    "projects": "প্রকল্প",
+    "emails": "ইমেইল",
+    "tasks": "কাজ",
+    "invoices": "চালান",
+    "reports": "প্রতিবেদন",
+    "documents": "ডকুমেন্ট",
+    "storage": "স্টোরেজ",
+    "settings": "সেটিংস"
+  },
+  "DashboardPage": {
+    "containerTitle": "ড্যাশবোর্ড",
+    "containerDescription": "ড্যাশবোর্ডে আপনার সামগ্রিক পরিস্থিতি দেখুন",
+    "totalRevenue": "মোট আয়",
+    "expectedRevenue": "প্রত্যাশিত আয়",
+    "activeUsers": "সক্রিয় ব্যবহারকারী",
+    "accounts": "হিসাব",
+    "opportunities": "সুযোগ",
+    "contacts": "যোগাযোগ",
+    "leads": "লিড",
+    "projects": "প্রকল্প",
+    "tasks": "কাজ",
+    "myTasks": "আমার কাজ",
+    "invoices": "চালান",
+    "documents": "ডকুমেন্ট",
+    "storage": "স্টোরেজ"
+  },
+  "RegisterComponent": {
+    "cardTitle": "একটি নতুন অ্যাকাউন্ট তৈরি করুন",
+    "cardDescription": "আপনার একাউন্ট তৈরি করুন",
+    "label": "ভাষা",
+    "locale": "{locale, select, de {জার্মান} en {ইংরেজি} cz {চেক} uk {ইউক্রেনী} other {অজানা}}"
+  },
+  "CrmModuleMenuComponent": {
+    "menuTitle": "বিপণন",
+    "cardDescription": "আপনার বিপণন সম্পর্কিত সব তথ্য দেখুন",
+    "label": "ভাষা",
+    "locale": "{locale, select, de {জার্মান} en {ইংরেজি} cz {চেক} uk {ইউক্রেনী} other {অজানা}}"
+  }
+}
