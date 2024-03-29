@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import Feedback from "./Feedback";
 import FulltextSearch from "./FulltextSearch";
 import LocaleSwitcher from "./LocaleSwitcher";
+import Link from "next/link";
 
 type Props = {
 
@@ -21,6 +22,11 @@ const Header = ({  lang }: Props) => {
         <div className="flex items-center gap-3">
           <LocaleSwitcher  />
           <Feedback />
+          <Link
+          href={"/dashboard"}
+          >
+            Dashboard
+          </Link>
         </div>
       </div>
       <Separator />
