@@ -9,10 +9,13 @@ import { useTranslations } from 'next-intl';
 
 const Sidebar = () => {
 
-    const t = useTranslations("Sidebar");
-    const [open, setOpen] = useState(true);
+  const t = useTranslations("Sidebar");
+  const [open, setOpen] = useState(true);
   const [isMounted, setIsMounted] = useState(false);
   const pathname = usePathname();
+  console.log(pathname,'dfs')
+  const parts = pathname.split('/');
+const path = parts[parts.length ? parts.length - 1 : 0];
   useEffect(() => {
     setIsMounted(true);
   }, []);
@@ -23,13 +26,13 @@ const Sidebar = () => {
 
   
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-[#edf0f2] items-center">
       <div
         className={` ${
-          open ? "w-72" : "w-20 "
-        }  h-screen p-5  pt-8 relative duration-300`}
+          open ? "w-72 p-5" : "w-20 p-3 "
+        }  h-screen   pt-8 relative duration-300 `}
       >
-        <div className="flex gap-x-4 items-center">
+        <div className="flex gap-x-4 items-center w-full">
           <div
             className={`cursor-pointer duration-500 border rounded-full px-4 py-2 ${
               open && "rotate-[360deg]"
@@ -47,10 +50,11 @@ const Sidebar = () => {
             {process.env.NEXT_PUBLIC_APP_NAME}
           </h1>
         </div>
-        <div className="pt-6">
+        <div className="pt-6 w-full ">
         {sidebarConfig.sidebarNav.map((item, index) => {
         const Icon = Icons[item.icon as keyof typeof Icons];
-
+    
+        const isPath = item.href?.includes(path);
         return item.href ? (
           <Link
             aria-label={item.title}
@@ -60,21 +64,28 @@ const Sidebar = () => {
             target={item.external ? "_blank" : ""}
             rel={item.external ? "noreferrer" : ""}
           >
-            <span
+            <div
               className={cn(
-                "group flex w-full items-center px-4 py-3 hover:bg-primary/20 hover:text-foreground ",
-                pathname === item.href
-                  ? "bg-primary/10 font-medium text-foreground border-l-4 border-primary"
+                "group flex w-full items-center px-4 py-3  ",
+                isPath && open
+                  ? "bg-white font-medium text-foreground border-l-4 border-rose-500 rounded-lg"
                   : "text-muted-foreground",
                 item.disabled && "pointer-events-none opacity-60"
               )}
             >
+              
+              <div>
               <Icon
-                className="mr-2 h-4 w-4 transition-transform duration-300 ease-linear group-hover:rotate-12"
+              size={25}
+                className="mr-2  transition-transform duration-300 ease-linear group-hover:rotate-12 text-black"
                 aria-hidden="true"
               />
-              <span>{t(`${item.title}`)}</span>
-            </span>
+              <span className='sr-only'>
+                {t(`${item.title}`)}
+              </span>
+              </div>
+              <span className={cn(open ? "" : "hidden")}>{t(`${item.title}`)}</span>
+            </div>
           </Link>
         ) : (
           <span

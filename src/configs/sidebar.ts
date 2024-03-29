@@ -1,3 +1,4 @@
+import { getLocale } from "next-intl/server";
 /* eslint-disable react-hooks/rules-of-hooks */
 import { SidebarItems } from "@/types";
 
@@ -7,11 +8,12 @@ export interface SidebarConfig {
 
 
 
+
 export const sidebarConfig: SidebarConfig = {
   sidebarNav: [
     {
       title:"dashboard" ,
-      href: "/",
+      href: `/dashboard`,
       icon: "home",
       items: [],
     },

@@ -16,14 +16,14 @@ export default function NewDestinationHeader({
 
   return (
     <div className="flex h-screen overflow-hidden">
-      <Sidebar />
+    
       <div className="flex flex-col h-full w-full overflow-hidden">
         <Header
     
           lang={locale}
         />
-        <div className="flex-grow overflow-y-auto h-full p-5">{children}</div>
-        {/* <Footer /> */}
+        <div className="flex-grow h-full ">{children}</div>
+      
       </div>
     </div>
   );
