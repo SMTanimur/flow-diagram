@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useTransition } from "react";
 import { ReactCountryFlag } from "react-country-flag";
 
@@ -15,16 +15,19 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { LanguagesIcon } from "lucide-react";
+import { usePathname, useRouter } from "@/lib/navigation";
+import { useSearchParams } from "next/navigation";
 
 export default function LocaleSwitcher() {
-  const [isPending, startTransition] = useTransition();
 
+  const router = useRouter();
+  const locale = useLocale();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
   const t = useTranslations("Languages");
 
   const toggleLocale = (nextLocale: string) => {
-    startTransition(() => {
-      window.location.href = `/${nextLocale}`;
-    });
+    router.replace(`${pathname}?${searchParams}`, { locale: nextLocale });
   };
 
   return (
