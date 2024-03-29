@@ -8,7 +8,13 @@
     "bn-bd":"Bangla",
     "language":"Language"
   },
-  
+  "Sidebar": {
+    "dashboard": "Dashboard",
+    "crm": "Sales",
+    "projects": "Projects",
+    "emails": "E-mails",
+    "workflows": "Workflows"
+  },
   "ModuleMenu": {
     "dashboard": "Dashboard",
     "crm": {

@@ -9,6 +9,15 @@
     "language":"ভাষা"
   },
 
+  "Sidebar":{
+    "dashboard": "ড্যাশবোর্ড",
+    "crm": "বিপণন",
+    "projects": "প্রকল্প",
+    "emails": "ইমেইল",
+     "workflows": "কার্যপ্রণালী",
+    "settings": "সেটিংস"
+  },
+
   "ModuleMenu": {
     "dashboard": "ড্যাশবোর্ড",
     "crm": {

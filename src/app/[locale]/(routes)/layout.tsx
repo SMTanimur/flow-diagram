@@ -1,4 +1,5 @@
 import Header from '@/components/layout/Header';
+import Sidebar from '@/components/layout/sidebar';
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 
@@ -15,7 +16,7 @@ export default function NewDestinationHeader({
 
   return (
     <div className="flex h-screen overflow-hidden">
-      {/* <SideBar build={build} /> */}
+      <Sidebar />
       <div className="flex flex-col h-full w-full overflow-hidden">
         <Header
     

@@ -1,13 +1,18 @@
 import {
     
+  HomeIcon,
+    ServerIcon,
     type LucideIcon,
     type LucideProps,
+    GitForkIcon,
   } from "lucide-react";
   
   export type Icon = LucideIcon | any;
   
   export const Icons = {
-   
+   home:HomeIcon,
+   server:ServerIcon,
+   workflow:GitForkIcon,
     nextjs: (props: LucideProps) => (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
         <path
