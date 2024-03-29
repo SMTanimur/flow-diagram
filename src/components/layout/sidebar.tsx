@@ -39,7 +39,7 @@ const path = parts[parts.length ? parts.length - 1 : 0];
             }`}
             onClick={() => setOpen(!open)}
           >
-            HQ
+            RF
           </div>
 
           <h1
