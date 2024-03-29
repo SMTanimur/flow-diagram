@@ -1,7 +1,7 @@
-import { SiteNav } from "@/components/layout/main-nav";
+
 import { Toaster } from "@/components/ui/sonner";
 import "@/styles/globals.css";
-import type { Metadata } from "next";
+
 import { Inter } from "next/font/google";
 import { createTranslator, NextIntlClientProvider } from "next-intl";
 import { ReactNode } from "react";
@@ -61,7 +61,7 @@ export default async function RootLayout({
       
       <body className={inter.className}>
       <NextIntlClientProvider locale={locale} messages={messages}>
-      <SiteNav />
+   
         {children}
       <Toaster  richColors />
       </NextIntlClientProvider>

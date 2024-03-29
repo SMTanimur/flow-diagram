@@ -3,6 +3,12 @@
     "title": "শিরোনাম",
     "description": "বর্ণনা NextJS."
   },
+  "Languages":{
+    "en-us": "ইংরেজি",
+    "bn-bd": "বাংলা",
+    "language":"ভাষা"
+  },
+
   "ModuleMenu": {
     "dashboard": "ড্যাশবোর্ড",
     "crm": {

@@ -3,6 +3,12 @@
     "title": "Flow Diagram",
     "description": "Flow Diagram is an open source CRM build on top of NextJS."
   },
+  "Languages": {
+    "en-us": "English",
+    "bn-bd":"Bangla",
+    "language":"Language"
+  },
+  
   "ModuleMenu": {
     "dashboard": "Dashboard",
     "crm": {
